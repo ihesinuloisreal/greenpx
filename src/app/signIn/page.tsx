@@ -110,7 +110,7 @@ const Card = styled.div`
   padding: 14px;
   flex-direction: column;
   align-items: center;
-  gap: 1px;
+  /* gap: 41px; */
   border-radius: 12px;
   background: var(--Primary-color, #FFF);
   
@@ -157,7 +157,7 @@ const Form = styled.form`
   /* gap: 41px; */
 `;
 
-const ImputGroupSec = styled.div`
+const InputGroupSec = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -174,16 +174,16 @@ const ImputGroup = styled.div`
   gap: 8px;
   align-self: stretch;
   height: 54px;
-
+  width: 393px;
   border-radius: 12px;
   border: 1px solid var(--Neutral-100, #D8D8D8);
   background: var(--Primary-color, #FFF);
   
 `;
-const InputContainer = styled.div`
+/* const InputContainer = styled.div`
   align-items: center;
   gap: 8px;
-`;
+`; */
 const Input = styled.input`
   flex: 1 0 0;
   color: var(--Neutral-200, #BDBDBD);
@@ -252,7 +252,7 @@ const SignUpTxt = styled.div`
   align-items: flex-start;
   gap: 8px;
 `
-const SingUptext = styled.h4`
+const SingUptext = styled.p`
   color: var(--Neutral-400, #898989);
   text-align: center;
   font-feature-settings: 'clig' off, 'liga' off;
@@ -270,10 +270,75 @@ const SignUp = styled(Link)`
   font-family: Poppins;
   font-size: 18px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
-  line-height: 60px; /* 166.667% */
+  line-height: 50px; 
 `;
+
+const ForgotPass = styled.p`
+  color: var(--Dark-color, #013237);
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0px;
+  /* line-height: 30px;  */
+`;
+
+const Or = styled.div`
+  justify-content: center;
+  align-items: center;
+  color: var(--Neutral-600, #6F6C90);
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 166.667% */
+  margin-top: 20px;
+
+`;
+
+const GmailSection = styled.div`
+display: flex;
+width: 392px;
+height: 54px;
+padding: 18px 5px;
+margin-left:15rem;
+align-items: center;
+gap: 12px;
+border-radius: 12px;
+border: 1px solid var(--Accent-2, #C1E6BA);
+background: var(--Primary-color, #FFF);
+`;
+
+const GmailText = styled.div`
+color: var(--Dark-color, #013237);
+text-align: center;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 18px; /* 100% */
+`;
+
+const GmailIcon = styled.div`
+display: flex;
+width: 44px;
+height: 44px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 7px;
+border: 1px solid var(--Accent-2, #C1E6BA);
+`;
+
 const Signin = (): JSX.Element => {
   return (
     <>
@@ -320,8 +385,7 @@ const Signin = (): JSX.Element => {
             <H1>Sign In</H1>
             <H6>Welcome back to Green PX</H6>
           </CardHead>
-          <Form>
-            <ImputGroupSec>
+            <InputGroupSec>
               <ImputGroup>
                 {/* <InputContainer></InputContainer> */}
                 <Input type="text" placeholder="Email"/>
@@ -348,31 +412,59 @@ const Signin = (): JSX.Element => {
             /></InputBG>
 
               </ImputGroup>
-            </ImputGroupSec>
+            </InputGroupSec>
 
-            <ImputGroupSec>
-            <BtnSection>
-              <SignInBtn href="/">Sign in</SignInBtn>
-              <BtnIconBg>
-                <Image
-                  src="/images/arrow-right.svg"
-                  alt="Vercel Logo"
-                  className="dark:invert"
-                  width={24}
-                  height={24}
-                  priority
-                />
-              </BtnIconBg>
-            </BtnSection>
+            <InputGroupSec>
+              <BtnSection>
+                <SignInBtn href="/">Sign in</SignInBtn>
+                <BtnIconBg>
+                  <Image
+                    src="/images/arrow-right.svg"
+                    alt="Vercel Logo"
+                    className="dark:invert"
+                    width={24}
+                    height={24}
+                    priority
+                  />
+                </BtnIconBg>
+              </BtnSection>
             <SignUpTxt>
               <SingUptext>
               Don’t have an account? 
               </SingUptext>
               <SignUp href="/">Sign Up</SignUp>
             </SignUpTxt>
-            </ImputGroupSec>
-            
-          </Form>
+            <ForgotPass>Forgot your password?</ForgotPass>
+            </InputGroupSec>
+            <InputGroupSec>
+              <Or>Or</Or>
+              <GmailSection>
+                <GmailText>Log in with Google</GmailText>
+                <GmailIcon>
+                  <Image
+                    src="/images/Group.svg"
+                    alt="Vercel Logo"
+                    className="dark:invert"
+                    width={24}
+                    height={24}
+                    priority
+                  />
+                </GmailIcon>
+              </GmailSection>
+              <GmailSection>
+                <GmailText>Log in with Google</GmailText>
+                <GmailIcon>
+                  <Image
+                    src="/images/Vector.svg"
+                    alt="Vercel Logo"
+                    className="dark:invert"
+                    width={24}
+                    height={24}
+                    priority
+                  />
+                </GmailIcon>
+              </GmailSection>
+            </InputGroupSec>
           
         </Card>
       </Signinsec>
