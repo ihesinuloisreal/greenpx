@@ -3,117 +3,37 @@ import Image from "next/image";
 import React from "react";
 import Link from 'next/link'
 import styled from "styled-components";
-import Button from "@/components/customButton";
+import HeaderComponent from "@/components/header";
+import SideImage from "@/components/sideImage";
+
+import image from "../../../public/images/signinPage.png";
 
 
-// Navigation Section
-const MainHeader = styled.header`
-  background: rgba(0, 0, 0, 0.10);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(50px);
-  width: 100%;
-  height: 90px;
-`;
-const HeadItem = styled.div`
 
-  display: flex;
-  width: 1540px;
-  height: 60px;
-  padding-left: 64px;
-  justify-content: space-between;
-  align-items: center;
-`;
-const LogoSec = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 12px;
-`;
-const LogoTitle = styled.h2`
-color: var(--Accent-Color, #4EA771);
-text-align: center;
-font-feature-settings: 'clig' off, 'liga' off;
-font-family: Inter;
-font-size: 24px;
-font-style: normal;
-font-weight: 900;
-line-height: 18px; /* 75% */
-text-transform: uppercase;
-`;
-const MenuSection = styled.div`
-  display: flex;
-  height: 54px;
-  padding: 18px 24px;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 32px;
-  border-radius: 30px;
-`;
-const MenuTitle = styled(Link)`
-  text-decoration:none;
-  color: var(--Accent-Color, #4EA771);
-  text-align: center;
-  font-feature-settings: 'clig' off, 'liga' off;
-  font-family: Poppins;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 18px; /* 100% */
-`;
-const LinkSection = styled.div`
-  display: flex;
-  align-items: flex-start;
-  position: absolute;
-  left: 394px;
-  top: 3px;
-  width: 424px;
-  height: 54px;
-
-`;
-const Li = styled(Link)`
-  border-radius: 30px;
-  text-decoration:none;
-  color: var(--Accent-Color, #4EA771);
-  text-align: center;
-  font-feature-settings: 'clig' off, 'liga' off;
-  font-family: Poppins;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 18px; /* 128.571% */
-  padding: 18px 24px;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 12px;
-`;
 
 // Main Body section
 const MainContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  flex: 1 0 0;
-  /* width: 50%; */
-  /* align-self: stretch; */
 `;
 const ImgCon = styled.div`
+  /* display: flex;
   background: url(<path-to-image>), lightgray 50% / cover no-repeat;
-  grid-column: 2/3;
+  justify-content: flex-end;
+  align-items:flex-end; */
 
 `;
 const Signinsec = styled.div`
-  grid-column: 1/2;
-  display: flex;
-  width: 654px;
-  height: 707px;
-  padding: 0px 129px;
+  /* display: flex;
+  padding: 0px 100px;
   flex-direction: column;
   align-items: center;
-  gap: 7px;
+  gap: 7px; */
 `;
 const Card = styled.div`
   display: flex;
-  padding: 14px;
+  padding: 0px 100px;
   flex-direction: column;
   align-items: center;
   /* gap: 41px; */
@@ -217,7 +137,35 @@ const InputBG = styled.div`
   angle: -180 deg; */
 
 `;
+const BtnSection = styled.div`
+  display: flex;
+  width: 392px;
+  height: 24px;
+  padding: 18px 5px;
+  align-items: center;
+  gap: 12px;
+  border-radius: 12px;
+  background: var(--Dark-color, #013237);
 
+`;
+const SignInBtn = styled(Link)`
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+
+  text-decoration: none;
+  color: var(--Primary-color, #FFF);
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 100% */
+`;
 const BtnIconBg = styled.div`
   padding: 10px;
   align-items: flex-start;
@@ -320,41 +268,7 @@ border: 1px solid var(--Accent-2, #C1E6BA);
 const Signin = (): JSX.Element => {
   return (
     <>
-    <MainHeader>
-      <HeadItem>
-      <LogoSec>
-        <Image
-          src="/images/Layer_1.svg"
-          alt="Vercel Logo"
-          className="dark:invert"
-          width={65.437}
-          height={60}
-          priority
-        />
-        <LogoTitle>Green PX</LogoTitle>
-      </LogoSec>
-        <LinkSection>
-          <Li href="/">Home</Li>
-          <Li href="/home">Products</Li>
-          <Li href="/about">About Us</Li>
-          <Li href="/contact">Contact Us</Li>
-        </LinkSection>
-
-      <MenuSection>
-        <MenuTitle href="/contact">Menu</MenuTitle>
-        <Image
-          src="/images/MenuIcon.svg"
-          alt="Menu Logo"
-          className="dark:invert"
-          width={24}
-          height={24}
-          priority
-        />
-      </MenuSection>
-      </HeadItem>
-    </MainHeader>
-
-
+    <HeaderComponent/>
     <MainContainer>
       
       <Signinsec>
@@ -393,10 +307,9 @@ const Signin = (): JSX.Element => {
             </InputGroupSec>
 
             <InputGroupSec>
-              {/* <BtnSection> */}
-                <Button>
-                  Sign in 
-                  <BtnIconBg>
+              <BtnSection>
+                <SignInBtn href="/">Sign in</SignInBtn>
+                <BtnIconBg>
                   <Image
                     src="/images/arrow-right.svg"
                     alt="Vercel Logo"
@@ -405,10 +318,8 @@ const Signin = (): JSX.Element => {
                     height={24}
                     priority
                   />
-                  </BtnIconBg>
-                </Button>
-                  
-              {/* </BtnSection> */}
+                </BtnIconBg>
+              </BtnSection>
             <SignUpTxt>
               <SingUptext>
               Don’t have an account? 
@@ -450,14 +361,7 @@ const Signin = (): JSX.Element => {
         </Card>
       </Signinsec>
       <ImgCon>
-        <Image
-            src="/images/signinPage.png"
-            alt="Vercel Logo"
-            className="dark:invert"
-            width={786}
-            height={885}
-            priority
-          />
+        <SideImage image={image}/>
       </ImgCon>
     </MainContainer>
 
