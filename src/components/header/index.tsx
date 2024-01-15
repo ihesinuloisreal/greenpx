@@ -34,15 +34,13 @@ font-weight: 900;
 line-height: 18px; /* 75% */
 text-transform: uppercase;
 `;
-const MenuSection = styled.div`
+
+const MenuTitle = styled(LinkComponent)`
   display: flex;
-  /* height: 54px; */
-  padding: 18px 24px;
+  padding: 18px 18px;
   align-items: center;
   gap: 10px;
   border-radius: 30px;
-`;
-const MenuTitle = styled(LinkComponent)`
 `;
 
 const HeaderComponent = () => {
@@ -61,8 +59,9 @@ const HeaderComponent = () => {
         </LogoSec>
           <NavigationComponent/>
   
-        <MenuSection>
-          <MenuTitle href="/contact">Menu</MenuTitle>
+        
+        <MenuTitle href="/contact">
+          Menu
           <Image
             src="/images/MenuIcon.svg"
             alt="Menu Logo"
@@ -71,7 +70,7 @@ const HeaderComponent = () => {
             height={24}
             priority
           />
-        </MenuSection>
+        </MenuTitle>
       </MainHeader>
   
     )

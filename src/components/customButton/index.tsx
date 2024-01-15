@@ -1,14 +1,15 @@
 
 
+import Link from "next/link";
 import styled from "styled-components";
 
-const SignInBtn = styled.button`
-  padding: 18px 5px;
-  width: 392px;
-  height: 24px;
+const SignInBtn = styled(Link)`
+  display: flex;
+  padding: 10px;
   justify-content: center;
   align-items: center;
-  background: var(--Dark-color, #013237);
+  gap: 10px;
+  flex: 1 0 0;
 
   text-decoration: none;
   color: var(--Primary-color, #FFF);
@@ -29,9 +30,9 @@ type ButtonProps = {
     href?: string;
 };
 
-const Button = ({onClick, children}: ButtonProps) =>{
+const Button = ({href, children}: ButtonProps) =>{
     return(
-        <SignInBtn >{children}</SignInBtn>
+        <SignInBtn href="" >{children}</SignInBtn>
     )
 }
 export default Button;
