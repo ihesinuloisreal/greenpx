@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import styled from "styled-components";
+import Icon from "../customIcon";
+import icon from '../../../public/images/arrow-right.svg'
 
 const SignInBtn = styled(Link)`
   display: flex;
@@ -21,6 +23,22 @@ const SignInBtn = styled(Link)`
   font-weight: 700;
   line-height: 18px; /* 100% */
 `;
+const BtnSection = styled.div`
+  display: flex;
+  width: 392px;
+  height: 24px;
+  padding: 18px 5px;
+  align-items: center;
+  gap: 12px;
+  border-radius: 12px;
+  background: var(--Dark-color, #013237);
+
+`;
+// const CustomIcon = styled(Icon)`
+//     padding: 10px;
+//     border-radius: 7px;
+//     background: var(--Primary-color-90, #EAF8E7);
+// `
 
 type ButtonProps = {
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void; // to handle onClick functions
@@ -32,7 +50,10 @@ type ButtonProps = {
 
 const Button = ({href, children}: ButtonProps) =>{
     return(
-        <SignInBtn href="" >{children}</SignInBtn>
+        <BtnSection>
+         <SignInBtn href="" >{children}</SignInBtn>
+         <Icon src={icon} width="24" height="24"/>
+        </BtnSection>
     )
 }
 export default Button;

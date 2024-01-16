@@ -7,7 +7,9 @@ import HeaderComponent from "@/components/header";
 import SideImage from "@/components/image";
 
 import image from "../../../public/images/signinPage.png";
+import src from '../../../public/images/sms.svg'
 import FormComponent from "@/components/Form";
+import InputFieldComponent from "@/components/Form/InputField/inputField.component";
 
 
 
@@ -31,7 +33,9 @@ const Signin = (): JSX.Element => {
     <>
     <HeaderComponent/>
     <MainContainer>
-      <FormComponent/>
+      <FormComponent>
+        <InputFieldComponent src={src}/>
+      </FormComponent>
       
       <ImgCon>
         <SideImage src={image}/>

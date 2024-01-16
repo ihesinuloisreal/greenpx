@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from 'react'
+import React, { ReactNode } from 'react'
 import styled from 'styled-components';
 import InputGroupcomponent from './inputGroup/InputGroup.component';
 
@@ -30,45 +30,17 @@ const Card = styled.div`
   
   
 `;
-const CardHead = styled.div`
- 
-  /* flex-direction: column;
-  align-items: flex-start; */
-  /* gap: 13px;  */
-  /* width: 392px;
-  height: 100px; */
 
-`;
-const H1 = styled.h1`
-  color: var(--Neutral-800, #170F49);
-  font-feature-settings: 'clig' off, 'liga' off;
-  font-family: Inter;
-  /* font-size: 34px; */
-  font-style: normal;
-  margin-bottom: 0px
-`;
-const H6 = styled.h5`
-  width: 392px;
-  // height:30px;
-  color: var(--Neutral-400, #898989);
-  font-feature-settings: 'clig' off, 'liga' off;
-  font-family: Poppins;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  margin-top: 10px
-`;
+type FormProp = {
+  children: ReactNode
+}
 
-
-const FormComponent = () => {
+const FormComponent = ({children}:FormProp) => {
   return (
     <Signinsec>
         <Card>
-          <CardHead>
-            <H1>Sign In</H1>
-            <H6>Welcome back to Green PX</H6>
-          </CardHead>
-            <InputGroupcomponent/>
+          
+            {children}
           
         </Card>
       </Signinsec>

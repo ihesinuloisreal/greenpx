@@ -30,6 +30,17 @@ const InputBG = styled.div`
   angle: -180 deg; */
 
 `;
+const InputGroup = styled.div`
+  /* display: flex;
+  padding: 10px 5px 10px 8px;
+  align-items: center;
+  height: 54px;
+  width: 393px;
+  border-radius: 12px;
+  border: 1px solid var(--Neutral-100, #D8D8D8);
+  background: var(--Primary-color, #FFF); */
+  
+`;
 
 type prop = {
   src: any;
@@ -38,7 +49,7 @@ type prop = {
 const InputFieldComponent = ({src}:prop) => {
   return (
     <>
-    <Input type="text" placeholder="Email"/>
+      <Input type="text" placeholder="Email"/>
       <InputBG>
         <ImageComponent
           src={src}
