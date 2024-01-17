@@ -16,7 +16,11 @@ import googleIcon from '../../../public/images/Group.svg'
 import facebookIcon from '../../../public/images/Vector.svg'
 import Button from "@/components/customButton";
 import SignInSignUpQ from "@/components/signIn_SignUp_Q";
+import InputSection from "@/components/Form/inputSection/InputSection";
+import InputFieldComponent from "@/components/Form/InputField/inputField.component";
 
+import LockIcon from '../../../public/images/lock.svg'
+import SmsIcon from '../../../public/images/sms.svg'
 
 
 
@@ -67,7 +71,14 @@ const Signin = (): JSX.Element => {
     <MainContainer>
       <FormComponent>
         <CardHeadComponent h1="Sign In" h6="Welcome back to Green PX"/>
-        <InputGroupcomponent/>
+        <InputGroupcomponent>
+          <InputSection>
+            <InputFieldComponent src={SmsIcon}/>
+          </InputSection>
+          <InputSection>
+            <InputFieldComponent src={LockIcon}/>
+          </InputSection>
+        </InputGroupcomponent>
         <Button href='/'>
             Sign in
           </Button>

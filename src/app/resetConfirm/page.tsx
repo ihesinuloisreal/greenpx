@@ -7,11 +7,8 @@ import HeaderComponent from "@/components/header";
 import SideImage from "@/components/image";
 
 import image from "../../../public/images/signinPage.png";
-import src from '../../../public/images/sms.svg'
+import like from '../../../public/images/like.svg'
 import FormComponent from "@/components/Form";
-import InputFieldComponent from "@/components/Form/InputField/inputField.component";
-import InputSection from "@/components/Form/inputSection/InputSection";
-import InputGroupcomponent from "@/components/Form/inputGroup/InputGroup.component";
 import CardHeadComponent from "@/components/Card/CardHead.Component";
 import Button from "@/components/customButton";
 
@@ -25,10 +22,10 @@ const MainContainer = styled.div`
   align-items: center;
 `;
 const ImgCon = styled.div`
-  /* display: flex;
-  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
-  justify-content: flex-end;
-  align-items:flex-end; */
+  width: 355.06px;
+  height: 355.06px;
+  justify-content: center;
+  align-items: center;
 
 `;
 
@@ -39,12 +36,8 @@ const Signin = (): JSX.Element => {
     <MainContainer>
       <FormComponent>
       <CardHeadComponent h1="Reset Password" h6="please input your email address"/>
-      <InputGroupcomponent>
-          <InputSection>
-            <InputFieldComponent src={src}/>
-          </InputSection>
-        </InputGroupcomponent>
-        <Button href='/resetConfirm'>
+      
+        <Button href='/signIn'>
           Reset password
           </Button>
       </FormComponent>

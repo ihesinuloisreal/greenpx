@@ -15,8 +15,8 @@ const LinkSection = styled.div`
 const NavigationComponent = () => {
   return (
     <LinkSection>
-        <Licomponent href="/">Home</Licomponent>
-        <Licomponent href="/">Products</Licomponent>
+        <Licomponent href="/signIn">Home</Licomponent>
+        <Licomponent href="/resetPass">Products</Licomponent>
         <Licomponent href="/">About Us</Licomponent>
         <Licomponent href="/">Contact Us</Licomponent>
     </LinkSection>
