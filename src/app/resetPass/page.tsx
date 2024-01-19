@@ -14,6 +14,8 @@ import InputSection from "@/components/Form/inputSection/InputSection";
 import InputGroupcomponent from "@/components/Form/inputGroup/InputGroup.component";
 import CardHeadComponent from "@/components/Card/CardHead.Component";
 import Button from "@/components/customButton";
+import icon from '../../../public/images/arrow-right.svg'
+
 
 
 
@@ -41,10 +43,10 @@ const Signin = (): JSX.Element => {
       <CardHeadComponent h1="Reset Password" h6="please input your email address"/>
       <InputGroupcomponent>
           <InputSection>
-            <InputFieldComponent src={src}/>
+            <InputFieldComponent type="email" placeholde="Email" src={src}/>
           </InputSection>
         </InputGroupcomponent>
-        <Button href='/resetConfirm'>
+        <Button href='/resetConfirm' src={icon}>
           Reset password
           </Button>
       </FormComponent>

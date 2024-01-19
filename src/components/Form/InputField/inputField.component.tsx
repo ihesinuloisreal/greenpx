@@ -43,13 +43,15 @@ const InputGroup = styled.div`
 `;
 
 type prop = {
-  src: any;
+  src: string;
+  placeholde?: string;
+  type? : string;
 }
 
-const InputFieldComponent = ({src}:prop) => {
+const InputFieldComponent = ({src, type, placeholde}:prop) => {
   return (
     <>
-      <Input type="text" placeholder="Email"/>
+      <Input type={type} placeholder={placeholde}/>
       <InputBG>
         <ImageComponent
           src={src}

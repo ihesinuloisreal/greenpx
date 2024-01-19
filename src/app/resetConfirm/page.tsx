@@ -8,9 +8,12 @@ import SideImage from "@/components/image";
 
 import image from "../../../public/images/signinPage.png";
 import like from '../../../public/images/like.svg'
+import reset from '../../../public/images/resetCon.png'
 import FormComponent from "@/components/Form";
 import CardHeadComponent from "@/components/Card/CardHead.Component";
 import Button from "@/components/customButton";
+import InputGroupcomponent from "@/components/Form/inputGroup/InputGroup.component";
+import ImageComponent from "@/components/image";
 
 
 
@@ -22,10 +25,10 @@ const MainContainer = styled.div`
   align-items: center;
 `;
 const ImgCon = styled.div`
-  width: 355.06px;
+  /* width: 355.06px;
   height: 355.06px;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 
 `;
 
@@ -35,11 +38,14 @@ const Signin = (): JSX.Element => {
     <HeaderComponent/>
     <MainContainer>
       <FormComponent>
-      <CardHeadComponent h1="Reset Password" h6="please input your email address"/>
-      
-        <Button href='/signIn'>
-          Reset password
-          </Button>
+        
+        <InputGroupcomponent>
+        <CardHeadComponent h1="Reset Password" h3="Check your mail inbox for a password reset mail from us"/>
+          <ImageComponent src={reset}/>
+        </InputGroupcomponent>
+        <Button href='/resetPassword' src={like}>
+          Okay
+        </Button>
       </FormComponent>
       
       <ImgCon>

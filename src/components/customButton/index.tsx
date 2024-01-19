@@ -3,7 +3,6 @@
 import Link from "next/link";
 import styled from "styled-components";
 import Icon from "../customIcon";
-import icon from '../../../public/images/arrow-right.svg'
 
 const SignInBtn = styled(Link)`
   display: flex;
@@ -45,14 +44,15 @@ type ButtonProps = {
     children?: React.ReactNode; // make the component able to receive children elements
     color?: 'primary' | 'secondary'; // two styling options (you can create as many as you want)
     disabled?: boolean; // make the button disabled or not
-    href?: string; // Remember to remove the question mark
+    href: string; // Remember to remove the question mark
+    src: string
 };
 
-const Button = ({href, children }: ButtonProps) =>{
+const Button = ({href, children, src }: ButtonProps) =>{
     return(
         <BtnSection>
          <SignInBtn href={href} >{children}</SignInBtn>
-         <Icon src={icon} width="24" height="24"/>
+         <Icon src={src} width="24" height="24"/>
         </BtnSection>
     )
 }

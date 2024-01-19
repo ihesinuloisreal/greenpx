@@ -19,7 +19,7 @@ import SignInSignUpQ from "@/components/signIn_SignUp_Q";
 import InputSection from "@/components/Form/inputSection/InputSection";
 import InputFieldComponent from "@/components/Form/InputField/inputField.component";
 
-import LockIcon from '../../../public/images/lock.svg'
+import LockIcon from '../../../public/images/eye-slash.svg'
 import SmsIcon from '../../../public/images/sms.svg'
 import icon from '../../../public/images/arrow-right.svg'
 
@@ -74,21 +74,16 @@ const Signin = (): JSX.Element => {
         <CardHeadComponent h1="Sign In" h6="Welcome back to Green PX"/>
         <InputGroupcomponent>
           <InputSection>
-            <InputFieldComponent type="email" placeholde="Enter Email" src={SmsIcon}/>
+            <InputFieldComponent type="Password" placeholde="Enter Password" src={LockIcon}/>
           </InputSection>
           <InputSection>
-            <InputFieldComponent type="password" placeholde="Enter Password" src={LockIcon}/>
+            <InputFieldComponent type="password" placeholde="Confirm Password" src={LockIcon}/>
           </InputSection>
         </InputGroupcomponent>
         <Button src={icon} href='/'>
-            Sign in
+        Reset password
           </Button>
-          <SignInSignUpQ/>
-          <ForgotPass>Forgot your password?</ForgotPass>
-        <Or>Or</Or>
-        <SocialMediaComponent title="Log in with Google" image={googleIcon}/>
-        <SocialMediaComponent title="Log in with Facebook" image={facebookIcon}/>
-       
+         
       </FormComponent>
       
       <ImgCon>
